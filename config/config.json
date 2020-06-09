@@ -2,7 +2,7 @@
   "development": {
     "url": "postgres://nalesgwx:5lY8Ve30v1Be9ojBq-V16Yy3BoUKXH59@balarama.db.elephantsql.com:5432/nalesgwx",
     "dialect": "postgres",
-    "operatorsAliases": 0
+    "operatorsAliases": "0"
   },
   "test": {
     "username": "root",

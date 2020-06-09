@@ -1,62 +1,62 @@
-// const User = require("./models").user;
+const User = require("./models").user;
 
-// async function getAllUsers() {
-//   try {
-//     const users = await User.findAll();
-//     users.forEach((user) => {
-//       console.log(user.get({ plain: true }));
-//     });
-//   } catch (e) {
-//     console.error("error", e);
-//   }
-// }
+async function getAllUsers() {
+  try {
+    const users = await User.findAll();
+    users.forEach((user) => {
+      console.log(user.get({ plain: true }));
+    });
+  } catch (e) {
+    console.error("error", e);
+  }
+}
 
-// getAllUsers();
+getAllUsers();
 
-// const TodoListItem = require("./models").toDoItem;
+const TodoListItem = require("./models").toDoItem;
 
-// async function getAllItems() {
-//   try {
-//     const items = await TodoListItem.findAll();
-//     items.forEach((item) => {
-//       console.log(item.get({ plain: true }));
-//     });
-//   } catch (e) {
-//     console.error("error", e);
-//   }
-// }
+async function getAllItems() {
+  try {
+    const items = await TodoListItem.findAll();
+    items.forEach((item) => {
+      console.log(item.get({ plain: true }));
+    });
+  } catch (e) {
+    console.error("error", e);
+  }
+}
 
-// getAllItems();
+getAllItems();
 
-// const User = require("./models").user;
+const User = require("./models").user;
 
-// async function getUserTwo() {
-//   try {
-//     const user = await User.findByPk(2);
+async function getUserTwo() {
+  try {
+    const user = await User.findByPk(2);
 
-//     console.log(user.get({ plain: true }));
-//   } catch (e) {
-//     console.error("error", e);
-//   }
-// }
-// getUserTwo();
+    console.log(user.get({ plain: true }));
+  } catch (e) {
+    console.error("error", e);
+  }
+}
+getUserTwo();
 
-// const User = require("./models").user;
+const User = require("./models").user;
 
-// async function createUser() {
-//   try {
-//     const newUser = await User.create({
-//       name: "Cari Pretorius",
-//       email: "cari@cari.com",
-//       phone: 1234569,
-//       createdAt: new Date(),
-//       updatedAt: new Date(),
-//     });
-//     console.log(newUser);
-//   } catch (e) {
-//     console.error("error", e);
-//   }
-// }
+async function createUser() {
+  try {
+    const newUser = await User.create({
+      name: "Cari Pretorius",
+      email: "cari@cari.com",
+      phone: 1234569,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+    console.log(newUser);
+  } catch (e) {
+    console.error("error", e);
+  }
+}
 // createUser();
 
 const TodoListItem = require("./models").toDoItem;
