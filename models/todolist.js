@@ -8,7 +8,8 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   toDoList.associate = function (models) {
-    todoList.belongsTo(models.user);
+    toDoList.belongsTo(models.user);
+    toDoList.hasMany(models.toDoItem);
   };
   return toDoList;
 };

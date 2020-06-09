@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   toDoItem.associate = function (models) {
-    // associations can be defined here
+    toDoItem.belongsTo(models.toDoList);
   };
   return toDoItem;
 };
