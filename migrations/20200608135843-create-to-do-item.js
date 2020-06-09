@@ -11,11 +11,9 @@ module.exports = {
       task: {
         type: Sequelize.STRING,
       },
-
       deadline: {
         type: Sequelize.STRING,
       },
-      important: { type: Sequelize.BOOLEAN },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

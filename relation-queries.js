@@ -1,4 +1,4 @@
-const { user, toDoItem, toDoList } = require("./models");
+const { user, toDoItem, toDoList, tag } = require("./models");
 
 // async function getUsers() {
 //   const allUsers = await user.findAll({
@@ -28,17 +28,25 @@ const { user, toDoItem, toDoList } = require("./models");
 
 // getUsers().then((users) => console.log(users));
 
-async function getUserTasks(id) {
-  const userTasks = await user.findByPk(id, {
-    include: [
-      {
-        model: toDoList,
-        attributes: ["name"],
-        include: { model: toDoItem, attributes: ["task"] },
-      },
-    ],
-  });
-  console.log(userTasks.get({ plain: true }));
-}
+// async function getUserTasks(id) {
+//   const userTasks = await user.findByPk(id, {
+//     include: [
+//       {
+//         model: toDoList,
+//         attributes: ["name"],
+//         include: { model: toDoItem, attributes: ["task"] },
+//       },
+//     ],
+//   });
+//   console.log(userTasks.get({ plain: true }));
+// }
 
-getUserTasks(2);
+// getUserTasks(2);
+
+async function itemsTags() {
+  const todoItemsTags = await toDoItem.findAll({
+    include: [tag],
+  });
+  return todoItemsTags.map((item) => item.get({ plain: true }));
+}
+itemsTags().then((items) => console.log("important todoItems", items));
